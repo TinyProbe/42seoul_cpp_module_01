@@ -6,10 +6,11 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 03:52:04 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/12 16:34:51 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/12 19:58:52 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef HARL_HPP
 #define HARL_HPP
 
