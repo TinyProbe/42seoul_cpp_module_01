@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 18:50:01 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/11 22:41:27 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/22 03:14:01 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ public:
 	Zombie();
 	Zombie(std::string name);
 	~Zombie();
+
 	void Announce(void);
+
 	static Zombie* zombieHorde(int N, std::string name);
 
 };

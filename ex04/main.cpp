@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 02:00:47 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/12 03:17:54 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/22 04:39:48 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,25 @@ int main(int ac, char** av) {
 		return 1;
 	}
 	std::ofstream ofs(file + std::string(".replace"));
+	if (!ofs.is_open()) {
+		return 1;
+	}
 	std::string src;
 	std::string dst;
-	while (!ifs.eof()) {
-		src += ifs.get();
+	while (getline(ifs, dst)) {
+		src += (dst + '\n');
 	}
-	src.resize(src.size() - 2);
-	for (int i = 0; i < (int) src.size(); ) {
-		bool same = true;
-		if ((int) src.size() - i >= (int) s1.size()) {
-			for (int j = i; j < i + (int) s1.size(); ++j) {
-				if (src[j] != s1[j - i]) {
-					same = false;
-					break;
-				}
-			}
-		} else {
-			same = false;
+	dst.clear();
+	int l = 0, r = 0;
+	while (true) {
+		r = src.find(s1, l);
+		if ((size_t) r == src.npos) {
+			dst += src.substr(l);
+			break;
 		}
-		if (same) {
-			dst += s2;
-			i += (int) s1.size();
-		} else {
-			dst += src[i++];
-		}
+		dst += src.substr(l, r - l);
+		dst += s2;
+		l = r + s1.size();
 	}
 	ofs.write(dst.c_str(), dst.size());
 	ifs.close();

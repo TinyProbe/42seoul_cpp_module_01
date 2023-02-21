@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 03:52:04 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/12 19:58:52 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/22 04:52:59 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ class Harl {
 	void info(void);
 	void warning(void);
 	void error(void);
+
 public:
 	Harl();
 	~Harl();
+
 	void complain(std::string level);
 
 };

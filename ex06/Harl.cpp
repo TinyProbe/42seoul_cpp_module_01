@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 03:52:05 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/12 19:50:12 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/22 04:54:37 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Harl::Harl() {
 	f[3] = &Harl::error;
 }
 Harl::~Harl() {}
+
 void Harl::complain(std::string level) {
 	(this->*f[level[0] - '0'])();
 	std::cout << '\n';

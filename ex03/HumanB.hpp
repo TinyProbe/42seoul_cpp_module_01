@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 23:15:39 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/12 00:29:14 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/22 03:28:30 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	HumanB();
 	HumanB(const std::string& name);
 	~HumanB();
+
 	void attack() const;
 	void setWeapon(Weapon& wpn);
 
