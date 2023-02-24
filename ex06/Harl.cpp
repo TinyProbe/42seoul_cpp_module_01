@@ -6,13 +6,11 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 03:52:05 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/22 04:54:37 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/24 12:05:26 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
-void (Harl::*f[4])(void);
 
 void Harl::debug(void) { std::cout << "[ DEBUG ]" << '\n'; }
 void Harl::info(void) { std::cout << "[ INFO ]" << '\n'; }

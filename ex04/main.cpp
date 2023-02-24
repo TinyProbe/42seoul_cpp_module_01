@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 02:00:47 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/22 04:39:48 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/24 11:53:28 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main(int ac, char** av) {
 	}
 	std::ofstream ofs(file + std::string(".replace"));
 	if (!ofs.is_open()) {
+		ifs.close();
 		return 1;
 	}
 	std::string src;

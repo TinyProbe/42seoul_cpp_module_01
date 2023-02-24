@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 03:52:04 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/17 19:27:07 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/24 12:08:35 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int main(int ac, char** av) {
 	if (ac != 2) {
 		return 1;
 	}
-	std::string arg(av[1]);
 	Harl h;
+	std::string arg(av[1]);
 	int sel = 0;
 	sel = (arg == "debug" ? 1 : sel);
 	sel = (arg == "info" ? 2 : sel);
